@@ -1,6 +1,6 @@
 let intervalHandle;
 let currentImg = 0;
-let interval = 5000;
+let interval = 2500;
 
 let mainImg = document.getElementById("main");
 let gallery = document.getElementById("galeria");
@@ -27,10 +27,10 @@ fetch("https://www.placecage.com/c/53/135/", { mode: "no-cors", cache: "no-cache
         for (let i = 0; i < gallery.children.length; i++) {
             const image = gallery.children.item(i);
             console.log(image);
-            let width = Math.floor(Math.random() * 40 + 10);
-            let height = Math.floor(Math.random() * 40 + 10);
-            let url = `https://www.placecage.com/c/${width}0/${height}0`;
-            images.push(`https://www.placecage.com/c/${width}0/${height}0`);
+            let width = Math.floor(Math.random() * 450 + 50);
+            let height = Math.floor(Math.random() * 450 + 50);
+            let url = `https://www.placecage.com/c/${width}/${height}`;
+            images.push(`https://www.placecage.com/c/${width}/${height}`);
             image.src = url;
         }
     }
