@@ -20,6 +20,8 @@ function change(img) {
     console.log(intervalHandle);
 }
 
+intervalHandle = setInterval(change, interval);
+
 fetch("https://www.placecage.com/c/53/135/", { mode: "no-cors", cache: "no-cache" }).then(
     () => {
         //change photos to random
@@ -37,5 +39,3 @@ fetch("https://www.placecage.com/c/53/135/", { mode: "no-cors", cache: "no-cache
 ).catch(() =>{
     images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 });
-
-intervalHandle = setInterval(change, interval);
